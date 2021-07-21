@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5" client="site" method="upgrade">
+	<name>SPLWPK Tagging</name>
+	<author>Ammar Idris</author>
+	<creationDate>Julai 2021</creationDate>
+	<copyright>Copyright (C) 2021 Ammar Idris. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>ammaridris@gmail.com</authorEmail>
+	<authorUrl>www.ammaridris.com</authorUrl>
+	<version>1.6</version>
+	<description>Membantu pentadbir web Joomla! untuk membuat tagging SPLWK mengikut kriteria yang ditetapkan.</description>
+
+	<files>
+		<filename module="mod_eac_splwpk">mod_eac_splwpk.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_eac_splwpk.xml</filename>
+		<filename>style.css</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="tagging"
+					type="list"
+					default="0"
+					label="Tagging"
+					description="Pilih Tagging"
+					>
+					<option value="seo-h1">SEO - H1</option>
+					<option value="splwpk-search-function">Search Function</option>
+					<option value="splwpk-w3c">W3C Disability Accessibility</option>
+					<option value="splwpk-broadcast">Updated Content - Broadcast</option>
+					<option value="splwpk-about-us">Updated Content - About Us</option>
+					<option value="splwpk-news">Updated Content - News</option>
+					<option value="splwpk-gov-policies">Updated Content - Government Policies</option>
+					<option value="splwpk-faq">Updated Content - FAQ</option>
+					<option value="splwpk-client-charter">Updated Content - Achievement of Client Charter</option>
+					<option value="splwpk-contact-details">Updated Content - Contact Details</option>
+					<option value="splwpk-open-data">Open Data</option>
+					<option value="splwpk-publication">Publication</option>
+					<option value="splwpk-privacy-policy">Privacy Policy Statement</option>
+					<option value="splwpk-pdpa">Personal Data Protection Act</option>
+					<option value="splwpk-feedback-form">Feedback Form</option>
+				</field>
+				
+				<field
+					name="timestamp_papar"
+					type="radio"
+					default=""
+					label="Papar Timestamp?"
+					description="Nak papar timestamp atau tak"
+					>
+					<option value="1">Ya</option>
+					<option value="">Tidak</option>
+				</field>
+				
+				<field
+					name="txt_timestamp"
+					type="calendar"
+					default=""
+					label="Timestamp Manual"
+					description="Timestamp dimasukkan secara manual"
+					class="input-medium"
+					format="%Y-%m-%d %H:%M:%S"
+					singleheader="true"
+					showtime="true"
+					timeformat="24"
+					todaybutton="true"
+					weeknumbers="false"
+					filltable="true"
+					minyear="-3"
+					maxyear="5"
+					>
+				</field>
+
+				<field
+					name="seo_h1_text"
+					type="text"
+					label="Text H1"
+					description="Text H1 untuk SEO sahaja"
+					default=""
+					>
+				</field>
+				
+				<field
+					name="open_data_text"
+					type="textarea"
+					filter="safehtml"
+					rows="3"
+					cols="40"
+					label="Nama Data Set"
+					description="Nama Data Set"
+					default=""
+					>
+				</field>
+				
+				<field
+					name="open_data_url"
+					type="text"
+					label="URL Data Set"
+					description="URL Data Set"
+					default=""
+					>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+
+</extension>
